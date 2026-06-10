@@ -1,0 +1,595 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GREEN MISSION INDIA | Connect To Paryavaran</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+:root{
+--primary:#0F5132;
+--secondary:#1E6B47;
+--gold:#D4AF37;
+--light:#F7F8F8;
+--dark:#1B1B1B;
+--white:#ffffff;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#fff;
+color:var(--dark);
+line-height:1.7;
+overflow-x:hidden;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+section{
+padding:100px 0;
+}
+
+h2{
+font-size:42px;
+font-weight:700;
+margin-bottom:20px;
+color:var(--primary);
+}
+
+.section-title{
+text-align:center;
+margin-bottom:60px;
+}
+
+.section-title p{
+max-width:700px;
+margin:auto;
+color:#666;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:rgba(255,255,255,0.92);
+backdrop-filter:blur(12px);
+z-index:1000;
+border-bottom:1px solid rgba(0,0,0,0.05);
+}
+
+.nav-container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 5%;
+}
+
+.logo{
+font-size:22px;
+font-weight:800;
+color:var(--primary);
+letter-spacing:1px;
+}
+
+.nav-links{
+display:flex;
+gap:30px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+transition:.3s;
+}
+
+.nav-links a:hover{
+color:var(--primary);
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:var(--primary);
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+background:var(--gold);
+color:#111;
+transform:translateY(-3px);
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+position:relative;
+overflow:hidden;
+background:
+linear-gradient(rgba(255,255,255,.85),rgba(255,255,255,.90)),
+url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1800&q=80');
+background-size:cover;
+background-position:center;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+width:500px;
+height:500px;
+background:rgba(15,81,50,.08);
+border-radius:50%;
+top:-150px;
+right:-150px;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+width:450px;
+height:450px;
+background:rgba(212,175,55,.08);
+border-radius:50%;
+bottom:-150px;
+left:-150px;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:900px;
+padding:20px;
+}
+
+.hero h1{
+font-size:72px;
+font-weight:800;
+color:var(--primary);
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.hero h3{
+font-size:22px;
+letter-spacing:4px;
+color:var(--gold);
+margin-bottom:25px;
+font-weight:600;
+}
+
+.hero p{
+font-size:20px;
+max-width:700px;
+margin:auto;
+color:#444;
+margin-bottom:40px;
+}
+
+/* MISSION */
+
+.mission-box{
+background:white;
+padding:60px;
+border-radius:25px;
+box-shadow:0 15px 40px rgba(0,0,0,.06);
+border:1px solid rgba(0,0,0,.05);
+text-align:center;
+}
+
+.mission-box p{
+font-size:18px;
+color:#555;
+}
+
+/* CARDS */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+padding:35px;
+border-radius:22px;
+box-shadow:0 10px 30px rgba(0,0,0,.06);
+transition:.4s;
+border:1px solid rgba(0,0,0,.04);
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card i{
+font-size:42px;
+color:var(--primary);
+margin-bottom:20px;
+}
+
+.card h4{
+font-size:22px;
+margin-bottom:12px;
+color:var(--primary);
+}
+
+.card p{
+color:#666;
+}
+
+/* WHY SECTION */
+
+.why{
+background:var(--light);
+}
+
+.why-card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 8px 25px rgba(0,0,0,.05);
+}
+
+.why-card h4{
+color:var(--primary);
+margin-bottom:10px;
+}
+
+/* OCCASION */
+
+.occasion{
+background:linear-gradient(135deg,#0F5132,#1E6B47);
+color:white;
+}
+
+.occasion h2{
+color:white;
+}
+
+.occasion-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.occasion-card{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(10px);
+padding:30px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.15);
+}
+
+.occasion-card h4{
+margin-bottom:10px;
+color:var(--gold);
+}
+
+/* CTA */
+
+.cta{
+text-align:center;
+padding:120px 20px;
+}
+
+.cta h2{
+font-size:60px;
+line-height:1.2;
+margin-bottom:30px;
+}
+
+/* FOOTER */
+
+footer{
+background:#0D2D1E;
+color:white;
+padding:70px 20px;
+text-align:center;
+}
+
+footer h3{
+font-size:28px;
+margin-bottom:10px;
+}
+
+footer p{
+opacity:.8;
+margin-top:10px;
+}
+
+.gold{
+color:var(--gold);
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:42px;
+}
+
+.hero p{
+font-size:17px;
+}
+
+h2{
+font-size:34px;
+}
+
+.cta h2{
+font-size:38px;
+}
+
+.nav-links{
+display:none;
+}
+
+.mission-box{
+padding:35px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+<div class="nav-container">
+<div class="logo">GREEN MISSION INDIA</div>
+
+<div class="nav-links">
+<a href="#mission">Mission</a>
+<a href="#services">What We Do</a>
+<a href="#why">Why Us</a>
+<a href="#plantation">Plantation</a>
+</div>
+</div>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>GREEN MISSION INDIA</h1>
+
+<h3>CONNECT TO PARYAVARAN</h3>
+
+<p>
+Nature Gives Us Everything.
+It's Time To Give Something Back.
+</p>
+
+<a href="#" class="btn">Join The Green Mission</a>
+
+</div>
+
+</section>
+
+<!-- MISSION -->
+
+<section id="mission">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Our Mission</h2>
+</div>
+
+<div class="mission-box">
+
+<p>
+GREEN MISSION INDIA is committed to creating a greener, healthier and more sustainable future through meaningful environmental action. Our mission is to connect people with nature by promoting tree plantation, environmental awareness and long-term ecological responsibility. Through transparent plantation initiatives, community participation and professional documentation, we inspire individuals, families and organizations to contribute towards environmental restoration and a better future for generations to come.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- WHAT WE DO -->
+
+<section id="services">
+
+<div class="container">
+
+<div class="section-title">
+<h2>What We Do</h2>
+<p>Professional environmental initiatives designed for measurable impact and lasting sustainability.</p>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<i class="fas fa-tree"></i>
+<h4>Tree Plantation</h4>
+<p>Strategic plantation drives that help restore green cover and improve environmental health.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-seedling"></i>
+<h4>Plant Care & Monitoring</h4>
+<p>Continuous monitoring and maintenance to ensure healthy growth and long-term survival.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-earth-asia"></i>
+<h4>Environmental Awareness</h4>
+<p>Educational campaigns encouraging sustainable living and environmental responsibility.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-gift"></i>
+<h4>Special Occasion Plantation</h4>
+<p>Celebrate meaningful moments through eco-friendly tree plantation sponsorships.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-camera"></i>
+<h4>Photo & Video Documentation</h4>
+<p>Professional visual documentation providing complete transparency and trust.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-share-nodes"></i>
+<h4>Social Media Tribute</h4>
+<p>Share your environmental contribution and inspire others to join the movement.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- WHY -->
+
+<section id="why" class="why">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Why Green Mission India</h2>
+</div>
+
+<div class="grid">
+
+<div class="why-card">
+<h4>Environmental Responsibility</h4>
+<p>Promoting responsible action for ecological balance and sustainability.</p>
+</div>
+
+<div class="why-card">
+<h4>Long-Term Impact</h4>
+<p>Focused on creating measurable environmental benefits for decades ahead.</p>
+</div>
+
+<div class="why-card">
+<h4>Transparency</h4>
+<p>Complete plantation records, updates and documentation for sponsors.</p>
+</div>
+
+<div class="why-card">
+<h4>Community Participation</h4>
+<p>Connecting individuals and organizations through environmental action.</p>
+</div>
+
+<div class="why-card">
+<h4>Future Generations</h4>
+<p>Building a greener world that future generations can proudly inherit.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SPECIAL OCCASION -->
+
+<section id="plantation" class="occasion">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Special Occasion Plantation</h2>
+
+<p>
+Sponsor tree plantation activities in honour of life's meaningful moments and receive professional documentation.
+</p>
+
+</div>
+
+<div class="occasion-grid">
+
+<div class="occasion-card">
+<h4>Birthdays</h4>
+<p>Celebrate birthdays by creating a lasting environmental legacy.</p>
+</div>
+
+<div class="occasion-card">
+<h4>Anniversaries</h4>
+<p>Mark important milestones with meaningful green contributions.</p>
+</div>
+
+<div class="occasion-card">
+<h4>Memorial Tributes</h4>
+<p>Honor loved ones through a living tribute that benefits nature.</p>
+</div>
+
+<div class="occasion-card">
+<h4>Corporate Gifting</h4>
+<p>Premium eco-conscious gifting solutions for organizations and teams.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="container">
+
+<h2>
+One Person.<br>
+One Tree.<br>
+One Better Future.
+</h2>
+
+<a href="#" class="btn">Join The Green Mission</a>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<h3>GREEN MISSION INDIA</h3>
+
+<p class="gold">CONNECT TO PARYAVARAN</p>
+
+<p>Plant Today. Protect Tomorrow.</p>
+
+</footer>
+
+</body>
+</html>
